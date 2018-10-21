@@ -12,13 +12,17 @@
   },
   "keywords": [
     "Eco",
-    "Yeoman",
-    "Generator"
+    "game",
+    "mod",
+    "yeoman-generator"
   ],
   "author": "ayan4m1 <andrew@bulletlogic.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ayan4m1/generator-ecomod/issues"
   },
-  "homepage": "https://github.com/ayan4m1/generator-ecomod#readme"
+  "homepage": "https://github.com/ayan4m1/generator-ecomod#readme",
+  "dependencies": {
+    "yeoman-generator": "^3.1.1"
+  }
 }
