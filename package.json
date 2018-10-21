@@ -2,7 +2,7 @@
   "name": "generator-ecomod",
   "version": "0.1.0",
   "description": "Yeoman generator for Eco mods",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
     "test": "gulp test"
   },
