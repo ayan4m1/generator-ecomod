@@ -2,8 +2,10 @@
   "name": "generator-ecomod",
   "version": "0.1.0",
   "description": "Yeoman generator for Eco mods",
-  "main": "app/index.js",
+  "main": "generators/app/index.js",
   "scripts": {
+    "build": "gulp",
+    "watch": "gulp watch",
     "test": "gulp test"
   },
   "repository": {
@@ -24,5 +26,28 @@
   "homepage": "https://github.com/ayan4m1/generator-ecomod#readme",
   "dependencies": {
     "yeoman-generator": "^3.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "ava": "^0.25.0",
+    "babel-eslint": "^10.0.1",
+    "del": "^3.0.0",
+    "eslint": "^5.7.0",
+    "eslint-plugin-ava": "^5.1.1",
+    "eslint-plugin-babel": "^5.2.1",
+    "gulp": "^4.0.0",
+    "gulp-ava": "^0.19.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-eslint": "^5.0.0",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-test": "^1.9.1"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.test.js"
+    ]
   }
 }
