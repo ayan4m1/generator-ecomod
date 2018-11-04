@@ -1,13 +1,11 @@
-'use strict';
 const Generator = require('yeoman-generator');
 
-module.exports = class extends Generator {
+export default class extends Generator {
   constructor(args, opts) {
     super(args, opts);
-    this.argument('name', { type: String, required: true, desc: 'Name of the mod' });
-    this.argument('tests', { type: Boolean, required: true, desc: 'Whether to generate a test project or not'});
   }
-  prompting() {
+
+  async prompting() {
     const prompts = [
       {
         type: 'input',
@@ -30,15 +28,15 @@ module.exports = class extends Generator {
       }
     ];
 
-    return this.prompt(prompts).then(result => {
-      this.name = result.name;
-      this.tests = result.tests;
-    });
+    this.answers = await this.prompt(prompts);
+    console.dir(this.answers);
   }
+
   buildSolution() {
     this.log('building .sln');
   }
+
   buildProject() {
     this.log('building .csproj');
   }
-};
+}
